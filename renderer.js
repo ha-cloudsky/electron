@@ -25,5 +25,6 @@ document.getElementById("upload-button").addEventListener("click", async () => {
 
 document.getElementById("open-folder-button").addEventListener("click", () => {
   const outputDirectory = path.join(__dirname, "csv_output");
+  console.log(outputDirectory);
   ipcRenderer.invoke("open-directory", outputDirectory);
 });
